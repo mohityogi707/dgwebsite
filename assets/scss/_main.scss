@@ -1,0 +1,141 @@
+
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: rgba($black, 0);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 2px;
+  background-color: rgba($black, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $theming1;
+}
+
+
+body{
+  font-family: 'Poppins', sans-serif;
+  // overflow: hidden auto;
+}
+
+.headingPage {
+  height: 70vh;
+  background: url(../img/index/aboutuspage.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  &.careerHeading {
+    background: url(../img/index/careerheading.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  &.privacyHeading {
+    background: url(../img/index/privacypolicy.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  &.tandcheading {
+    background: url(../img/index/term&C.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  &.aboutHeading {
+    background: url(../img/index/aboutbg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  &.portfoliHeading {
+    background: url(../img/index/portfolio.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-color: rgba($black, 0.5);
+  }
+  & .headingmain {
+    font-size: 70px;
+  }
+  & .pagetab {
+    & .pagelink {
+      font-size: 14px;
+      font-weight: 500;
+      color: $white;
+      &.active {
+        color: darken($white, 30);
+      }
+      &::before {
+        color: $white;
+      }
+    }
+  }
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {
+  .headingPage {
+    height: 60vh;
+    &::before {
+    }
+    & .headingmain {
+      font-size:50px;
+    }
+    & .pagetab {
+      & .pagelink {
+        &.active {
+        }
+        &::before {
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .headingPage {
+    height: 50vh;
+    &::before {
+    }
+    & .headingmain {
+      font-size:32px;
+    }
+    & .pagetab {
+      & .pagelink {
+        &.active {
+        }
+        &::before {
+        }
+      }
+    }
+  }
+}

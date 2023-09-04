@@ -1,0 +1,128 @@
+.privacyPolicy {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    & .headingMain {
+        font-size: 50px;
+        font-weight: 700;
+        color: $black;
+        line-height: normal;
+    }
+    & .privacyDate {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    & .privacyHeading {
+        font-size: 28px;
+        font-weight: 600;
+        color: $black;
+        padding-top: 18px;
+    }
+    & .privacySubheading {
+        font-size: 22px;
+        font-weight: 600;
+        color: $black;
+        padding-top: 10px;
+        &.subHeadingtwo {
+            padding-top: 15px;
+        }
+    }
+    & .privacyData {
+        font-size: 13px;
+        font-weight: 400;
+        padding-top: 10px;
+    }
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .privacyPolicy {
+        & .headingMain {
+            font-size: 35px;
+        }
+        & .privacyDate {
+            font-size: 13px;
+        }
+        & .privacyHeading {
+            font-size: 26px;
+        }
+        & .privacySubheading {
+            font-size: 20px;
+        }
+        & .privacyData {
+            font-size: 13px;
+        }
+        & ul {
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .privacyPolicy {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        & .headingMain {
+            font-size: 30px;
+        }
+        & .privacyDate {
+            font-size: 12px;
+        }
+        & .privacyHeading {
+            font-size: 24px;
+            padding-top: 16px;
+        }
+        & .privacySubheading {
+            font-size: 18px;
+            padding-top: 8px;
+        }
+        & .privacyData {
+            font-size: 12px;
+            padding-top: 8px;
+        }
+        & ul {
+            padding-left: 18px;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .privacyPolicy {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        & .headingMain {
+            font-size: 26px;
+        }
+        & .privacyDate {
+            font-size: 12px;
+        }
+        & .privacyHeading {
+            font-size: 20px;
+            padding-top: 14px;
+        }
+        & .privacySubheading {
+            font-size: 16px;
+            padding-top: 6px;
+        }
+        & .privacyData {
+            font-size: 12px;
+            padding-top: 6px;
+        }
+        & ul {
+            padding-left: 18px;
+        }
+    }
+}

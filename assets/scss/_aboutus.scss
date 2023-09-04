@@ -1,0 +1,279 @@
+.aboutPage {
+    padding-top: 40px;
+    padding-bottom: 45px;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index:1;
+        background: url(../img/index/ic_dot_bg.png);
+        // background-size: cover;
+        background-position: center;
+        // filter: grayscale(1);
+    }
+    & .aboutpageHeading {
+        font-size: 35px;
+        font-weight: 600;
+        color: $black;
+    }
+    & .aboutData {
+        font-size: 14px;
+        font-weight: 400;
+        color: lighten($black,60);
+        padding-top: 16px;
+    } 
+    & .aboutCard {
+        & .abouthead {
+            gap: 12px;
+        }
+        & .aboutcardImg {
+            height: 45px;
+            width: 45px;
+            padding: 10px;
+        }
+        & .cardHeading {
+            font-size: 16px;
+            color: $black;
+        }
+        & .aboutdetail {
+            font-size: 13px;
+            color: lighten($black, 55);
+            padding-top: 9px;
+        }
+    } 
+    & .animationone {
+        animation: animation-1 5s ease-out infinite;
+    }
+    & .animationtwo {
+        animation: animation-2 5s ease-out infinite;
+    }
+    @keyframes animation-1 {
+        50% {
+            transform: translate(0, 20px);
+        }
+    }
+    @keyframes animation-2 {
+        50% {
+            transform: translate(0, 35px);
+        }
+    }
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .aboutPage {
+        & .aboutData {
+        } 
+        & .aboutpageHeading {
+            font-size: 27px;
+        }
+        & .aboutCard {
+            & .abouthead {
+            }
+            & .aboutcardImg {
+            }
+            & .cardHeading {
+            }
+            & .aboutdetail {
+            }
+        } 
+        & .animationone {
+        }
+        & .animationtwo {
+        }
+        & .counterCard { 
+            & .cardImgMain {
+            }
+            & .counter-data {
+            }
+            & .counter-heading {
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .aboutPage {
+        & .aboutData {
+        } 
+        & .aboutpageHeading {
+            font-size: 24px;
+        }
+        & .aboutCard {
+            & .abouthead {
+            }
+            & .aboutcardImg {
+            }
+            & .cardHeading {
+            }
+            & .aboutdetail {
+            }
+        } 
+        & .animationone {
+        }
+        & .animationtwo {
+        }
+        & .counterCard { 
+            & .cardImgMain {
+            }
+            & .counter-data {
+            }
+            & .counter-heading {
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .aboutPage {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        & .aboutData {
+            font-size: 12px;
+            padding-top: 6px;
+        } 
+        & .aboutpageHeading {
+            font-size: 20px;
+        }
+        & .aboutCard {
+            & .abouthead {
+                gap: 10px;
+            }
+            & .aboutcardImg {
+                height: 40px;
+                width: 40px;
+                padding: 8px;
+            }
+            & .cardHeading {
+                font-size: 15px;
+            }
+            & .aboutdetail {
+                font-size: 12px;
+                padding-top: 6px;
+            }
+        } 
+        & .animationone {
+        }
+        & .animationtwo {
+        }
+        & .counterCard { 
+            & .cardImgMain {
+                height: 50px;
+                width: 50px;
+            }
+            & .counter-data {
+                font-size: 21px;
+            }
+            & .counter-heading {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+// gallery page start 
+.gallerySection {
+    padding-top: 35px;
+    padding-bottom: 40px;
+    & .galleryHeading {
+        font-size: 28px;
+        font-weight: 700;
+    }
+    & .gallerydata {
+        font-size: 16px;
+        color: $black;
+    }
+    & .box {
+        & .inner {
+            aspect-ratio: 5/4;
+            transition: all 0.3s ease-in-out;
+            // &::before {
+            //     content: ""; 
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     height: 100%;
+            //     width: 100%;
+            //     background-color: rgba($white, 0.3);
+            // }
+            & img {
+                object-fit: cover;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        &:hover {
+            & .inner {
+                transform: rotate(3deg);
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {
+    .gallerySection {
+        padding-top: 35px;
+        padding-bottom: 40px;
+        & .galleryHeading {
+            font-size: 22px;
+        }
+        & .gallerydata {
+            font-size: 16x;
+        }
+        & .box {
+            & .inner {
+                & img {
+                }
+            }
+            &:hover {
+                & .inner {
+                    transform: rotate(0);
+                    & img {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// gallery page end

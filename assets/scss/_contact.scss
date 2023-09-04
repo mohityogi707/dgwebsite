@@ -1,0 +1,134 @@
+.contactPage {
+    padding-top: 30px;
+    padding-bottom: 45px;
+    & .contactHeading {
+        font-size: 40px;
+        font-weight: 600;
+        color: $black;
+    }
+    & .contactCard {
+        padding: 15px;
+        & .cardHeading {
+            font-size: 18px;
+            color: $white;
+        }
+        & .contacticon {
+            height: 45px;
+            width: 45px;
+            padding: 12px;
+            & img {
+                filter: brightness(0);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        & .MailHeading {
+            font-size: 14px;
+            font-weight: 400;
+            color: darken($white, 10);
+        }
+        &:hover {
+            & .contacticon {
+                & img {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    & .map {
+        height: 70vh;
+        margin-top: 42px;
+    }
+}
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .contactPage {
+        & .contactHeading {
+            font-size: 35px;
+        }
+        & .contactCard {
+            & .cardHeading {
+            }
+            & .contacticon {
+                & img {
+                }
+            }
+            & .MailHeading {
+            }
+        }
+        & .map {
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .contactPage {
+        & .contactHeading {
+            font-size: 28px;
+        }
+        & .contactCard {
+            & .cardHeading {
+            }
+            & .contacticon {
+                & img {
+                }
+            }
+            & .MailHeading {
+            }
+        }
+        & .map {
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .contactPage {
+        padding-top: 25px;
+        padding-bottom: 42px;
+        & .contactHeading {
+            font-size: 24px;
+        }
+        & .contactCard {
+            & .cardHeading {
+                font-size: 16px;
+            }
+            & .contacticon {
+                height: 40px;
+                width: 40px;
+                padding: 10px;
+                & img {
+                }
+            }
+            & .MailHeading {
+                font-size: 14px;
+                font-weight: 400;
+                color: darken($white, 10);
+            }
+            &:hover {
+                & .contacticon {
+                    & img {
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+        & .map {
+            height: 50vh;
+            margin-top: 30px;
+        }
+    }
+}

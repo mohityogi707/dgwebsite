@@ -1,0 +1,102 @@
+.subHeading {
+    font-size: 16px;
+    font-weight: 500;
+    color: $theming1;
+    &::before {
+        position: absolute;
+        content: '';
+        bottom: -2px;
+        left:50%;
+        transform: translateX(-50%);
+        background-color: $theming1;
+        height: 1.8px;
+        // border-radius: 20px;
+        width: 60%;
+    }
+    &.subheadingtwo {
+        color: $white;
+        &::before {
+            background-color: $white;
+            bottom: -4px;
+        }
+    }
+}
+.Heading {
+    font-size: 40px;
+    font-weight: 600;
+    color: $black;
+    line-height: 47px;
+    &.headingtwo {
+        color: $white;
+    }
+}
+
+@include media-breakpoint(basic) {}
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {
+}
+
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .subHeading {
+        &::before {
+        }
+        &.subheadingtwo {
+            &::before {
+            }
+        }
+    }
+    .Heading {
+        font-size:32px;
+        line-height: normal;
+        &.headingtwo {
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .subHeading {
+        font-size: 15px;
+        &::before {
+        }
+        &.subheadingtwo {
+            &::before {
+            }
+        }
+    }
+    .Heading {
+        font-size:27px;
+        line-height: 33px;
+        &.headingtwo {
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .subHeading {
+        font-size: 14px;
+        &::before {
+        }
+        &.subheadingtwo {
+            &::before {
+            }
+        }
+    }
+    .Heading {
+        font-size:22px;
+        line-height: 29px;
+        &.headingtwo {
+        }
+    }
+}

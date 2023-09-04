@@ -1,0 +1,143 @@
+.customBtn {
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 28px;
+    border: 1px solid $white;
+    // z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        height: 100%;
+        background-color: $white;
+        top: 0;
+        left: 0;
+        transform-origin: top;
+        transform: scaleX(0);
+        border-radius: 20px;
+        transition: all .3s ease-in-out;
+    }
+    &:hover {
+        color: $black;
+        &::before {
+            transform-origin: bottom;
+            transform: scaleX(1);
+        }
+        
+    }
+    &.btntwo {
+        color: $theming1;
+        border-color: $theming1;
+        &::before {
+            background-color: $theming1;
+        }
+        &:hover {
+            color: $white;
+            
+            &::before {
+            }
+            
+        }
+    }
+    &.btnthree {
+                border-color: $theming1;
+                color: $theming1;
+                z-index: 2;
+            &::before {
+                background-color: $theming1;
+                z-index: 1;
+            }
+            &:hover {
+                color: $white;
+                &::before {
+                }
+                
+            }
+    }
+}
+
+@include media-breakpoint(basic) {}
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {
+}
+
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .customBtn {
+        // font-size: 13px;
+        padding: 9px 26px;
+        &::before {
+        }
+        &:hover {
+            &::before {
+            }
+            
+        }
+        &.btntwo {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+                
+            }
+        }
+        &.btnthree {
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                    
+                }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {
+    .customBtn {
+        // font-size: 12px;
+        padding: 8px 24px;
+        &::before {
+        }
+        &:hover {
+            &::before {
+            }
+            
+        }
+        &.btntwo {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+                
+            }
+        }
+        &.btnthree {
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                    
+                }
+        }
+    }
+}

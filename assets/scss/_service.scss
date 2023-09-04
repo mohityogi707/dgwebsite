@@ -1,0 +1,108 @@
+.servicePage {
+    padding-top: 40px;
+    padding-bottom: 45px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background: url(../img/index/circlerotate.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        animation: rotate-animation 10s infinite linear;
+    }
+    @keyframes rotate-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    & .servicesCard {
+        border: 1px solid $theming1;
+        transition: all 0.3s ease-in-out;
+        padding: 20px 15px;
+        & .serviceimgMain {
+            transition: all 0.3s ease-in-out;
+            & .serviceImg {
+                width: 40px;
+                height: 40px;
+                // filter: brightness(0);
+                // & img {
+                // }
+            }
+        }
+        & .serviceHeading {
+            font-size: 16px;
+            font-weight: 600;
+            color: $black;
+        }
+        & .servicedetail {
+            font-size: 13px;
+            color:lighten($black, 50);
+            display: inline;
+            -webkit-line-clamp: 4;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;/* Important for long words! */
+        }
+        &:hover {
+            & .serviceimgMain {
+                transform: translateX( calc(100% - 40px));
+            }
+        }
+    }
+}
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {
+    .servicePage {
+        padding-top: 30px;
+        &::before {
+            width: 150px;
+            height: 150px;
+        }
+        & .servicesCard {
+            & .serviceimgMain {
+                & .serviceImg {
+                }
+            }
+            & .serviceHeading {
+                font-size: 15px;
+            }
+            & .servicedetail {
+            }
+            &:hover {
+                & .serviceimgMain {
+                    transform: translateX( 0);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,277 @@
+.footer {
+    padding-top: 40px;
+    padding-bottom: 45px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url(../img/index/bgshape.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+    & .footerLogo {
+        width: 140px;
+        & img {
+            filter: brightness(10);
+        }
+    }
+    & .footerdata {
+        font-size: 14px;
+        color: lighten($black, 80);
+        line-height: 25px;
+    }
+    & .footerHeading {
+        font-weight:500;
+        margin-bottom: 16px;
+        font-size: 20px;
+        color: $white;
+    }
+    & .footerSubheading {
+        font-weight: 500;
+        margin-bottom: 3px;
+        font-size: 16px;
+        color: $white;
+        line-height: normal;
+    }
+    & .footerMenu {
+        gap: 10px;
+    }
+    & .offcialinfo {
+        margin-top: 12px;
+    }
+    & .footerLink {
+        font-size: 14px;
+        color: #cccccc;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: translateX(8px);
+            color: $white;
+        }
+    }
+    & .footerLinktwo {
+        font-size: 14px;
+        color: #cccccc;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $white;
+        }
+        & .footericon {
+            min-width: 15px;
+            max-width: 15px;
+            &.location {
+                margin-top: 4px;
+            }
+            &.phone {
+                margin-top: 1px;
+            }
+        }
+    }
+    & .footerInput {
+        font-size: 14px;
+        color: $white;
+        font-weight: 400;
+        &::placeholder {
+            font-size: 14px;
+            color: $white;
+            font-weight: 400;
+        }
+    }
+    & .sendBtn {
+        height: 16px;
+        width: 18px;
+    }
+    & .socialmedia {
+        gap: 10px;
+        padding-top: 18px;
+        & .socialIcon {
+            height: 40px;
+            width: 40px;
+            padding: 10px;
+            & img {
+                transition: all 0.3s ease-in-out ;
+                filter: brightness(10);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: $white;
+                z-index: 0;
+                transition: all 0.3s ease-in-out;
+                transform: scale(0);
+            }
+            &:hover {
+                &::before {
+                    transform: scale(1);
+                }
+                & img {
+                    filter: none;
+                }
+            }
+        }
+    }
+}
+.copyrightSection {
+    padding-top:16px ;
+    padding-bottom: 16px;
+    & .copyright {
+        font-size: 14px;
+        font-weight: 400;
+        color: $black;
+    }
+}
+
+@include media-breakpoint(basic) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .footer {
+        &::before {
+        }
+        & .footerLogo {
+            & img {
+            }
+        }
+        & .footerdata {
+        }
+        & .footerHeading {
+            font-size: 18px;
+        }
+        & .footerSubheading {
+            font-size: 15px;
+        }
+        & .footerMenu {
+        }
+        & .offcialinfo {
+        }
+        & .footerLink {
+            &:hover {
+            }
+        }
+        & .footerInput {
+            font-size: 13px;
+            &::placeholder {
+                font-size: 13px;
+            }
+        }
+        & .sendBtn {
+        }
+        & .socialmedia {
+            & .socialIcon {
+                & img {
+                }
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                    & img {
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {
+    .footer {
+        padding-top: 35px;
+        padding-bottom: 40px;
+        &::before {
+        }
+        & .footerLogo {
+            & img {
+            }
+        }
+        & .footerdata {
+            font-size: 13px;
+            line-height: 21px;
+        }
+        & .footerHeading {
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+        & .footerSubheading {
+            font-size: 14px;
+        }
+        & .footerMenu {
+            gap: 7px;
+        }
+        & .offcialinfo {
+            margin-top: 10px;
+        }
+        & .footerLink {
+            font-size: 13px;
+            &:hover {
+                transform: translate(0);
+                color: #cccccc;
+            }
+        }
+        & .footerLinktwo {
+            font-size: 13px;
+            &:hover {
+                color: #cccccc;
+            }
+            & .footericon {
+                &.location {
+                }
+                &.phone {
+                }
+            }
+        }
+        & .footerInput {
+            font-size: 12px;
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+        & .sendBtn {
+        }
+        & .socialmedia {
+            gap: 10px;
+            padding-top: 18px;
+            & .socialIcon {
+                height: 35px;
+                width: 35px;
+                padding: 9px;
+                & img {
+                }
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                    & img {
+                    }
+                }
+            }
+        }
+    }
+    .copyrightSection {
+        & .copyright {
+            font-size: 13px;
+        }
+    }
+}

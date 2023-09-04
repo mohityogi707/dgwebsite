@@ -1,0 +1,349 @@
+.navbar {
+    transition: all 0.3s ease-in-out;
+    height: 80px;
+    & .navbar-brand {
+        width: 140px;
+        & img {
+            filter: brightness(10);
+        }
+    }
+    & .navbar-nav {
+        gap:38px;
+        & .nav-item {
+            &:hover {
+                & .navInner {
+                    visibility: visible;
+                    opacity: 1;
+                    animation: swip_up 0.3s linear 1;
+                }
+                & .navbarlink {
+                    &::after {
+                        transform:translateY(-50%) rotate(-180deg);
+                    }
+                }
+            }
+        }
+        & .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: $white;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $white;
+                bottom: -2px;
+                left: 0;
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform .3s ease-in-out;
+            }
+            &:hover {
+                &::before {
+                    transform-origin: left;
+                    transform: scaleX(1);
+                }
+            }
+            &.active {
+                &::before {
+                    transform-origin: left;
+                    transform: scaleX(1);
+                }
+            }
+        }
+        & .navbarlink {
+            padding-right: 16px !important;
+            &::after {
+                content: '';
+                height: 8px;
+                width: 12px;
+                position: absolute;
+                right: 0;
+                // left: 0;
+                top: 53%;
+                transform: translateY(-50%);
+                background: url(../img/index/down.svg) no-repeat;
+                background-size: cover;
+                background-position: center;
+                filter: brightness(10);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        & .navInner {
+            // display: none;
+            visibility: hidden;
+            opacity: 0;
+            position:absolute;
+            transition:all 0.3s ease-in-out;
+            top: 24px;
+            left: 0;
+            & .navInnerLink {
+                padding: 4px 24px 3px 10px;
+                color: $black;
+                font-size: 14px;
+                &:hover {
+                    background-color: darken($white, 6);
+                }
+            }
+        }
+        @keyframes swip_up {
+            0% {
+                transform: translate(0, 20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+        }
+    }
+    &.fixed-navbar {
+        background: $white;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0.15rem 0.15rem #dee2e6cc;
+        & .navbar-brand {
+            & img {
+                filter:none;
+            }
+        }
+        & .navbar-nav {
+            & .nav-link {
+                color: $black;
+                &::before {
+                    background-color: $black;
+                }
+                &:hover {
+                    &::before {
+                    }
+                }
+            }
+        }
+        & .navbarlink {
+            &::after {
+                filter: brightness();
+            }
+        }
+        & .customBtn {
+            border-color: $theming1;
+            color: $theming1;
+            &::before {
+                background-color: $theming1;
+            }
+            &:hover {
+                color: $white;
+                &::before {
+                }
+                
+            }
+        }
+        & .navbar-toggler-icon {
+            filter:none;
+        }
+    }
+    & .navOffcanvas {
+        width: 280px;
+        & .btn-close {
+            font-size: 12px;
+            filter: none;
+        }
+    }
+    & .navbar-toggler-icon {
+        filter: brightness(10);
+        height: 23px;
+        width: 23px;
+    }
+}
+
+@include media-breakpoint(basic) {}
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {
+}
+
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .navbar {
+        transition: all 0.3s ease-in-out;
+        & .navbar-brand {
+            // width: 50px;
+        }
+        & .navbar-nav {
+            gap:14px;
+            & .nav-link {
+                font-size: 14px;
+                color: $black !important;
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                }
+            }
+            & .navbarlink {
+                padding-right: 16px !important;
+                display: inline-flex;
+                &::after {
+                    filter: none;
+                    
+                }
+            }
+        }
+        & .customBtn {
+            border-color: $theming1;
+            color: $theming1;
+            &::before {
+                background-color: $theming1;
+            }
+            &:hover {
+                color: $white;
+                &::before {
+                }
+                
+            }
+        }
+        &.fixed-navbar {
+            & .navbar-nav {
+                & .nav-link {
+
+                    &::before {
+                    }
+                    &:hover {
+                        &::before {
+                        }
+                    }
+                }
+            }
+            & .customBtn {
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                    
+                }
+            }
+        }
+        & .navOffcanvas {
+            
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .navbar {
+        & .navbar-brand {
+        }
+        & .navbar-nav {
+            gap:14px;
+            & .nav-link {
+                // font-size: 13px;
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                }
+            }
+        }
+        & .customBtn {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+                
+            }
+        }
+        &.fixed-navbar {
+            & .navbar-nav {
+                & .nav-link {
+
+                    &::before {
+                    }
+                    &:hover {
+                        &::before {
+                        }
+                    }
+                }
+            }
+            & .customBtn {
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                    
+                }
+            }
+        }
+        & .navOffcanvas {
+            
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .navbar {
+        height: 60px;
+        & .navbar-brand {
+            width: 120px;
+        }
+        & .navbar-nav {
+            gap:14px;
+            & .nav-link {
+                // font-size: 12px;
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                }
+            }
+        }
+        & .customBtn {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+                
+            }
+        }
+        &.fixed-navbar {
+            & .navbar-nav {
+                & .nav-link {
+
+                    &::before {
+                    }
+                    &:hover {
+                        &::before {
+                        }
+                    }
+                }
+            }
+            & .customBtn {
+                &::before {
+                }
+                &:hover {
+                    &::before {
+                    }
+                    
+                }
+            }
+        }
+        & .navOffcanvas {
+            
+        }
+    }
+}
